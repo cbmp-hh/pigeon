@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>chatroom</title>
+    <link rel = "stylesheet" type = "text/css" href = "uni.css"/>
+    <link rel = "icon" type = "image/icon" href = "ico.png"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Patrick+Hand&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id = "header">
+        <div id = "ico-container">
+            <img id = "ico" src = "ico.png" alt = "Home">
+        </div>
+        <p id = "title-header">Secret chat room</p>
+        <button id = "lang" onclick = "langChange()"><p>中</p></button>
+    </div>
+    <div id = "body">
+        <div id = "nickname-div">
+            <input type = "text" placeholder = "nickname" id = "nickname"></input>
+            <button onclick = "getNickname()">Submit</button>
+        <div id = "stream">
+            
+        </div>
+    </div>
+    <div id = "message-div">
+        <input type = "text" placeholder = "Send a message..." id = "message"></input>
+    </div>
+</body>
+<script src = "uni.js"></script>
+</html>
