@@ -29,14 +29,14 @@ function toggleNicknameModal() {
 }
 
 function getNickname() {
-    nicknameValue = document.getElementById("nickname").value;
-    if (nicknameValue != "") {
+    const nicknameValue = document.getElementById("nickname-input").value;
+    if (nicknameValue.trim() !== "") {
         console.log("nickname: " + nicknameValue);
         currentNickname = nicknameValue;
-        document.getElementById("nickname").value = "";
+        document.getElementById("nickname-input").value = "";
         toggleNicknameModal(); // Hide modal after setting nickname
     } else {
-        alert("Nickname cannot be empty!")
+        alert("Nickname cannot be empty!");
     }
 }
 

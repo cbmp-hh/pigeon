@@ -1,4 +1,4 @@
-#header{
+#header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -12,14 +12,13 @@
     top: 0;
     left: 0;
     right: 0;
+    padding: 0 1vw; /* Add padding to ensure elements are spaced properly */
 }
 
-#ico-container{
+#ico-container {
     display: flex;
     align-items: center;
     height: 10vh;
-    position: sticky;
-    left: 1vw;
 }
 
 .header-button {
@@ -51,7 +50,7 @@
     align-items: center;
 }
 
-#lang{
+#lang {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -63,28 +62,30 @@
     cursor: pointer;
 }
 
-#lang:hover{
+#lang:hover {
     background-color: rgb(110, 110, 110);
 }
 
-#lang p{
+#lang p {
     color: white;
     font-family: 'Lato', sans-serif;
     font-size: 2vh;
     margin: 0;
 }
 
-#ico{
-    height: 8vh; 
+#ico {
+    height: 8vh;
     image-rendering: pixelated;
 }
 
-#title-header{
+#title-header {
     font-family: 'Patrick Hand', serif;
     font-size: 5vh;
+    flex-grow: 1;
+    text-align: center; /* Center the title */
 }
 
-#body{
+#body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -134,7 +135,7 @@
     background-color: rgb(110, 110, 110);
 }
 
-#stream{
+#stream {
     font-family: 'Lato', sans-serif;
     height: calc(90vh - 20vh);
     overflow-y: auto;
@@ -142,7 +143,7 @@
     margin-bottom: 8vh;
 }
 
-#message-div{
+#message-div {
     border: 2px solid grey;
     border-radius: 2.5vh;
     display: flex;
@@ -153,24 +154,24 @@
     align-self: center;
 }
 
-#message{
+#message {
     height: 5vh;
     width: 97.5vw;
     border: transparent;
     margin-left: 1vw;
 }
 
-#message:focus{
+#message:focus {
     border: none;
     outline: none;
 }
 
-.title{
+.title {
     font-family: 'Patrick Hand', serif;
     font-size: 5vh;
 }
 
-p{
+p {
     font-family: 'Lato', sans-serif;
 }
 
