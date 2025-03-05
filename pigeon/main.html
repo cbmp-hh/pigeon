@@ -15,6 +15,9 @@
             <img id = "ico" src = "ico.png" alt = "Home">
         </div>
         <p id = "title-header">Secret chat room</p>
+        <div class="header-button" onclick="toggleNicknameModal()">
+            <p>Nickname</p>
+        </div>
         <button id = "lang" onclick = "langChange()"><p>中</p></button>
     </div>
     <div id = "body">
@@ -23,6 +26,12 @@
             <button onclick = "getNickname()">Submit</button>
         <div id = "stream">
             
+        </div>
+        <div id="nickname-modal">
+            <div class="modal-content">
+                <input type="text" placeholder="nickname" id="nickname">
+                <button onclick="getNickname()">Submit</button>
+            </div>
         </div>
     </div>
     <div id = "message-div">
