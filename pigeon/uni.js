@@ -21,11 +21,11 @@ function langChange() {
     };
 }
 
-let currentNickname = '';
+let currentNickname = "";
 
 function toggleNicknameModal() {
-    const modal = document.getElementById('nickname-modal');
-    modal.style.display = modal.style.display === 'none' ? 'flex' : 'none';
+    const modal = document.getElementById("nickname-modal");
+    modal.style.display = modal.style.display === "none" ? "flex" : "none";
 }
 
 function getNickname() {
@@ -41,19 +41,19 @@ function getNickname() {
 }
 
 function createMessageBubble(nickname, message, timestamp) {
-    const messageDiv = document.createElement('div');
-    messageDiv.className = 'message-bubble';
+    const messageDiv = document.createElement("div");
+    messageDiv.className = "message-bubble";
     
-    const nicknameSpan = document.createElement('span');
-    nicknameSpan.className = 'message-nickname';
+    const nicknameSpan = document.createElement("span");
+    nicknameSpan.className = "message-nickname";
     nicknameSpan.textContent = nickname;
     
-    const timeSpan = document.createElement('span');
-    timeSpan.className = 'message-time';
+    const timeSpan = document.createElement("span");
+    timeSpan.className = "message-time";
     timeSpan.textContent = new Date(timestamp).toLocaleTimeString();
     
-    const messageContent = document.createElement('p');
-    messageContent.className = 'message-content';
+    const messageContent = document.createElement("p");
+    messageContent.className = "message-content";
     messageContent.textContent = message;
     
     messageDiv.appendChild(nicknameSpan);
