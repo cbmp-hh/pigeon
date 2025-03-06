@@ -138,7 +138,6 @@
 }
 
 #message-div {
-    border-radius: 2.5vh;
     display: flex;
     flex-direction: row;
     position: absolute;
@@ -149,18 +148,18 @@
 #attachment {
     height: 7vh;
     width: 7vh;
-    background-color: dim-grey;
+    background-color: dimgrey;
     color: white;
     font-size: 5vh;
     border: transparent;
     border-radius: 3.5vh;
-    box-shadow: .5vh .5vh #505050;
 }
 
 #message {
     height: 5vh;
     width: 90vw;
     border: 2px solid grey;
+    border-radius: 2.5vh;
     overflow: hidden;
     margin-left: 1vw;
 }
@@ -172,7 +171,7 @@
 
 #attachment:hover {
     background-color: #505050;
-    box-shadow: .5vh .5vh dim-grey;
+    box-shadow: .5vh .5vh dimgrey;
     cursor: pointer;
 }
 
