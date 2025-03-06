@@ -171,7 +171,6 @@
 
 #attachment:hover {
     background-color: #505050;
-    box-shadow: .5vh .5vh dimgrey;
     cursor: pointer;
 }
 
