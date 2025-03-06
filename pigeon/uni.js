@@ -4,6 +4,7 @@ var id = 0;
 function langChange() {
     console.log("langChange");
     const messageInput = document.getElementById("message"); // Get the message input field
+    const nicknameButton = document.querySelector(".header-button p"); // Get the nickname button text
 
     if (lang == 0) {
         // Switch to Chinese
@@ -12,6 +13,7 @@ function langChange() {
         nicknameModal.querySelector('input').placeholder = "暱稱";
         nicknameModal.querySelector('button').textContent = "提交";
         messageInput.placeholder = "發送訊息..."; // Change the placeholder to Chinese
+        nicknameButton.textContent = "暱稱"; // Translate nickname button text
         lang = 1;
     } else {
         // Switch back to English
@@ -20,6 +22,7 @@ function langChange() {
         nicknameModal.querySelector('input').placeholder = "nickname";
         nicknameModal.querySelector('button').textContent = "Submit";
         messageInput.placeholder = "Send a message..."; // Change the placeholder back to English
+        nicknameButton.textContent = "Nickname"; // Translate nickname button text back to English
         lang = 0;
     }
 }

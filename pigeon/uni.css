@@ -13,6 +13,7 @@
     left: 0;
     right: 0;
     padding: 0 1vw; /* Add padding to ensure elements are spaced properly */
+    box-sizing: border-box; /* Ensure padding is included in width */
 }
 
 #ico-container {
@@ -31,10 +32,12 @@
     border-radius: .5vh;
     margin: 0 1vw;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }
 
 .header-button:hover {
     background-color: rgb(110, 110, 110);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 .header-button p {
@@ -60,10 +63,12 @@
     border-radius: .5vh;
     margin-right: 1vw;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
 }
 
 #lang:hover {
     background-color: rgb(110, 110, 110);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
 }
 
 #lang p {
