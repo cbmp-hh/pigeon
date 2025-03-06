@@ -138,26 +138,12 @@
 }
 
 #message-div {
-    border: 2px solid grey;
     border-radius: 2.5vh;
     display: flex;
     flex-direction: row;
     position: absolute;
     bottom: 0.5vh;
-    overflow: hidden;
     align-self: center;
-}
-
-#message {
-    height: 5vh;
-    width: 90vw;
-    border: transparent;
-    margin-left: 1vw;
-}
-
-#message:focus {
-    border: none;
-    outline: none;
 }
 
 #attachment {
@@ -169,6 +155,19 @@
     border: transparent;
     border-radius: 3.5vh;
     box-shadow: .5vh .5vh #505050;
+}
+
+#message {
+    height: 5vh;
+    width: 90vw;
+    border: 2px solid grey;
+    overflow: hidden;
+    margin-left: 1vw;
+}
+
+#message:focus {
+    border: none;
+    outline: none;
 }
 
 #attachment:hover {
