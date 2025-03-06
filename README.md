@@ -104,11 +104,4 @@ This project is licensed under the [**CC BY 4.0 License**](https://creativecommo
 
 ---
 
-## Screenshots
-
-![Pigeon Chat Room](screenshot.png)  
-*Example of the Pigeon chat room in action.*
-
----
-
 Enjoy chatting on **Pigeon**! 🐦
