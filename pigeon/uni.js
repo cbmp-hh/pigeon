@@ -3,22 +3,25 @@ var id = 0;
 
 function langChange() {
     console.log("langChange");
+    const messageInput = document.getElementById("message"); // Get the message input field
+
     if (lang == 0) {
+        // Switch to Chinese
         langButton.innerHTML = "<p>Eng</p>";
-        header.innerHTML = "秘密聊​​天室"
+        header.innerHTML = "秘密聊天室";
         nicknameModal.querySelector('input').placeholder = "暱稱";
         nicknameModal.querySelector('button').textContent = "提交";
+        messageInput.placeholder = "發送訊息..."; // Change the placeholder to Chinese
         lang = 1;
-        return;
-    }
-    else {
+    } else {
+        // Switch back to English
         langButton.innerHTML = "<p>中</p>";
-        header.innerHTML = "Secret chat room"
+        header.innerHTML = "Secret chat room";
         nicknameModal.querySelector('input').placeholder = "nickname";
         nicknameModal.querySelector('button').textContent = "Submit";
+        messageInput.placeholder = "Send a message..."; // Change the placeholder back to English
         lang = 0;
-        return;
-    };
+    }
 }
 
 let currentNickname = '';
