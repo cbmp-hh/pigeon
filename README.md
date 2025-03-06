@@ -41,8 +41,8 @@ To run this project locally, follow these steps:
 ### Steps
 1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/your-username/pigeon-chat.git
-   cd pigeon-chat
+   git clone https://github.com/cbmp-hh/pigeon.git
+   cd pigeon
    ```
 
 2. **Run the Project**:
@@ -55,7 +55,7 @@ To run this project locally, follow these steps:
 ## File Structure
 
 ```
-pigeon-chat/
+pigeon/
 ├── main.html            # Main HTML file for the chat room
 ├── uni.css              # CSS file for styling the website
 ├── uni.js               # JavaScript file for functionality
