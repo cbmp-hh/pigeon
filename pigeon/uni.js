@@ -3,8 +3,8 @@ var id = 0;
 
 function langChange() {
     console.log("langChange");
-    const messageInput = document.getElementById("message"); // Get the message input field
-    const nicknameButton = document.querySelector(".header-button p"); // Get the nickname button text
+    const messageInput = document.getElementById("message");
+    const nicknameButton = document.querySelector(".header-button p");
 
     if (lang == 0) {
         // Switch to Chinese
@@ -12,8 +12,8 @@ function langChange() {
         header.innerHTML = "秘密聊天室";
         nicknameModal.querySelector('input').placeholder = "暱稱";
         nicknameModal.querySelector('button').textContent = "提交";
-        messageInput.placeholder = "發送訊息..."; // Change the placeholder to Chinese
-        nicknameButton.textContent = "暱稱"; // Translate nickname button text
+        messageInput.placeholder = "發送訊息...";
+        nicknameButton.textContent = "暱稱";
         lang = 1;
     } else {
         // Switch back to English
@@ -21,8 +21,8 @@ function langChange() {
         header.innerHTML = "Secret chat room";
         nicknameModal.querySelector('input').placeholder = "nickname";
         nicknameModal.querySelector('button').textContent = "Submit";
-        messageInput.placeholder = "Send a message..."; // Change the placeholder back to English
-        nicknameButton.textContent = "Nickname"; // Translate nickname button text back to English
+        messageInput.placeholder = "Send a message...";
+        nicknameButton.textContent = "Nickname";
         lang = 0;
     }
 }
@@ -40,7 +40,7 @@ function getNickname() {
         console.log("nickname: " + nicknameValue);
         currentNickname = nicknameValue;
         document.getElementById("nickname-input").value = "";
-        toggleNicknameModal(); // Hide modal after setting nickname
+        toggleNicknameModal();
     } else {
         alert("Nickname cannot be empty!");
     }
@@ -69,6 +69,28 @@ function createMessageBubble(nickname, message, timestamp) {
     return messageDiv;
 }
 
+function handleFileUpload(event) {
+    const file = event.target.files[0];
+    if (file) {
+        console.log("File selected:", file.name);
+
+        const newMessage = {
+            nickname: currentNickname,
+            content: `File: ${file.name}`,
+            timestamp: Date.now()
+        };
+
+        const messageBubble = createMessageBubble(
+            newMessage.nickname,
+            newMessage.content,
+            newMessage.timestamp
+        );
+        messageStream.appendChild(messageBubble);
+
+        messageStream.scrollTop = messageStream.scrollHeight;
+    }
+}
+
 langButton = document.getElementById("lang");
 header = document.getElementById("title-header");
 nicknameModal = document.getElementById("nickname-modal");
@@ -76,7 +98,6 @@ ico = document.getElementById("ico");
 message = document.getElementById("message");
 const messageStream = document.getElementById("stream");
 
-// Close modal when clicking outside
 window.onclick = function(event) {
     if (event.target === nicknameModal) {
         toggleNicknameModal();

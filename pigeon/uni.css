@@ -12,8 +12,8 @@
     top: 0;
     left: 0;
     right: 0;
-    padding: 0 1vw; /* Add padding to ensure elements are spaced properly */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    padding: 0 1vw;
+    box-sizing: border-box;
 }
 
 #ico-container {
@@ -32,12 +32,12 @@
     border-radius: .5vh;
     margin: 0 1vw;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-button:hover {
     background-color: rgb(110, 110, 110);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-button p {
@@ -63,12 +63,12 @@
     border-radius: .5vh;
     margin-right: 1vw;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #lang:hover {
     background-color: rgb(110, 110, 110);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Enhance shadow on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #lang p {
@@ -87,7 +87,7 @@
     font-family: 'Patrick Hand', serif;
     font-size: 5vh;
     flex-grow: 1;
-    text-align: center; /* Center the title */
+    text-align: center;
 }
 
 #body {
@@ -152,18 +152,44 @@
     border: 2px solid grey;
     border-radius: 2.5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
     position: absolute;
     bottom: 0.5vh;
     overflow: hidden;
     align-self: center;
+    padding: 0.5vh;
+    background-color: white;
+}
+
+#attachment-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 5vh;
+    width: 5vh;
+    background-color: rgb(73, 73, 73);
+    border-radius: .5vh;
+    margin-right: 1vw;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 2.5vh;
+    border: none;
+}
+
+#attachment-button:hover {
+    background-color: rgb(110, 110, 110);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #message {
     height: 5vh;
-    width: 97.5vw;
+    width: calc(97.5vw - 8vh);
     border: transparent;
     margin-left: 1vw;
+    flex-grow: 1;
 }
 
 #message:focus {

@@ -30,6 +30,11 @@
         </div>
     </div>
     <div id="message-div">
+        <!-- Attachment Button -->
+        <button id="attachment-button" onclick="document.getElementById('file-input').click()">+</button>
+        <!-- Hidden File Input -->
+        <input type="file" id="file-input" style="display: none;" onchange="handleFileUpload(event)">
+        <!-- Message Input -->
         <input type="text" placeholder="Send a message..." id="message">
     </div>
 </body>
