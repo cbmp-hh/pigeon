@@ -93,7 +93,7 @@
     border: 2px solid grey;
     border-radius: 2.5vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     position: absolute;
     bottom: 0.5vh;
     overflow: hidden;
@@ -102,7 +102,7 @@
 
 #message {
     height: 5vh;
-    width: 97.5vw;
+    width: 90vw;
     border: transparent;
     margin-left: 1vw;
 }
