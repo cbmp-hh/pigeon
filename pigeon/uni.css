@@ -171,10 +171,6 @@
     font-size: 5vh;
 }
 
-p {
-    font-family: 'Lato', sans-serif;
-}
-
 .message-bubble {
     background-color: #f0f0f0;
     border-radius: 1rem;
@@ -198,4 +194,8 @@ p {
 .message-content {
     margin-top: 0.25rem;
     margin-bottom: 0;
+}
+
+p {
+    font-family: 'Lato', sans-serif;
 }
