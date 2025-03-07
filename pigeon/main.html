@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>chatroom</title>
+    <title>Pigeon Chat Room</title>
     <link rel="stylesheet" type="text/css" href="uni.css"/>
     <link rel="icon" type="image/icon" href="ico.png"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,8 +32,8 @@
     <div id="message-div">
         <!-- Attachment Button -->
         <button id="attachment-button" onclick="document.getElementById('file-input').click()">+</button>
-        <!-- Hidden File Input -->
-        <input type="file" id="file-input" style="display: none;" onchange="handleFileUpload(event)">
+        <!-- Hidden File Input (Accepts only images) -->
+        <input type="file" id="file-input" style="display: none;" onchange="handleFileUpload(event)" accept="image/*">
         <!-- Message Input -->
         <input type="text" placeholder="Send a message..." id="message">
     </div>

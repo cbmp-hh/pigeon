@@ -70,23 +70,44 @@ function createMessageBubble(nickname, message, timestamp) {
 }
 
 function handleFileUpload(event) {
-    const file = event.target.files[0];
+    const file = event.target.files[0]; // Get the selected file
     if (file) {
-        console.log("File selected:", file.name);
+        // Check if the file is an image
+        if (!file.type.startsWith("image/")) {
+            alert("Please upload an image file (e.g., .jpg, .png, .gif).");
+            return;
+        }
 
+        console.log("Image selected:", file.name);
+
+        // Create a message bubble for the image
         const newMessage = {
             nickname: currentNickname,
-            content: `File: ${file.name}`,
+            content: file, // Store the file object
             timestamp: Date.now()
         };
 
+        // Create a message bubble
         const messageBubble = createMessageBubble(
             newMessage.nickname,
-            newMessage.content,
+            "", // No text content for images
             newMessage.timestamp
         );
+
+        // Create an image element
+        const imageElement = document.createElement("img");
+        imageElement.src = URL.createObjectURL(file); // Create a URL for the image
+        imageElement.alt = "Uploaded Image";
+        imageElement.style.maxWidth = "100%"; // Ensure the image fits in the chat
+        imageElement.style.borderRadius = "0.5rem"; // Add some styling
+
+        // Append the image to the message bubble
+        messageBubble.querySelector(".message-content").appendChild(imageElement);
+
+        // Append the message bubble to the chat stream
         messageStream.appendChild(messageBubble);
 
+        // Scroll to the bottom of the chat
         messageStream.scrollTop = messageStream.scrollHeight;
     }
 }
