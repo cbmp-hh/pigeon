@@ -32,10 +32,12 @@
     border-radius: .5vh;
     margin: 0 1vw;
     cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .header-button:hover {
     background-color: rgb(110, 110, 110);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .header-button p {
@@ -61,12 +63,10 @@
     border-radius: .5vh; /* Revert to square */
     margin-right: 1vw;
     cursor: pointer;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #lang:hover {
     background-color: rgb(110, 110, 110);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
 
 #lang p {
@@ -158,6 +158,8 @@
     align-self: center;
     padding: 0.5vh;
     background-color: white;
+    width: 95%; /* Ensure the message div fits within the screen */
+    margin: 0 auto; /* Center the message div */
 }
 
 #attachment-button {
@@ -168,7 +170,7 @@
     width: 5vh; /* Ensure width and height are equal */
     background-color: rgb(73, 73, 73);
     border-radius: 50%; /* Make the button a circle */
-    margin-right: 0.5vw; /* Reduced margin to bring it closer to the input */
+    margin-right: 0.25vw; /* Reduced margin to bring it closer to the input */
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
@@ -184,11 +186,11 @@
 
 #message {
     height: 5vh;
-    width: calc(97.5vw - 8vh);
+    width: calc(100% - 8vh); /* Adjust width to fit within the screen */
     border: transparent;
     margin-left: 1vw;
     flex-grow: 1;
-    border-radius: 50%; /* Make the textbox round on the edges */
+    border-radius: 2.5vh; /* Fully round the edges */
     padding: 0 1rem; /* Add padding for text inside the input */
 }
 

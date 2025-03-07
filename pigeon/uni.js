@@ -18,7 +18,7 @@ function langChange() {
     } else {
         // Switch back to English
         langButton.innerHTML = "<p>中</p>";
-        header.innerHTML = "Secret chat room";
+        header.innerHTML = "Pigeon: Anonymous Chatting";
         nicknameModal.querySelector('input').placeholder = "nickname";
         nicknameModal.querySelector('button').textContent = "Submit";
         messageInput.placeholder = "Send a message...";
@@ -46,7 +46,7 @@ function getNickname() {
     }
 }
 
-function createMessageBubble(nickname, message, timestamp) {
+function createMessageBubble(nickname, message, timestamp, isImage = false) {
     const messageDiv = document.createElement('div');
     messageDiv.className = 'message-bubble';
     
@@ -60,7 +60,19 @@ function createMessageBubble(nickname, message, timestamp) {
     
     const messageContent = document.createElement('p');
     messageContent.className = 'message-content';
-    messageContent.textContent = message;
+    
+    if (isImage) {
+        const imageElement = document.createElement('img');
+        imageElement.src = message; // message is the image URL
+        imageElement.alt = "Uploaded Image";
+        imageElement.style.maxWidth = "100%";
+        imageElement.style.width = "200px"; // Consistent width
+        imageElement.style.height = "auto"; // Maintain aspect ratio
+        imageElement.style.borderRadius = "0.5rem";
+        messageContent.appendChild(imageElement);
+    } else {
+        messageContent.textContent = message;
+    }
     
     messageDiv.appendChild(nicknameSpan);
     messageDiv.appendChild(timeSpan);
@@ -78,31 +90,30 @@ function handleFileUpload(event) {
             return;
         }
 
+        // Check if a nickname is set
+        if (!currentNickname) {
+            alert("Please set a nickname first!");
+            toggleNicknameModal();
+            return;
+        }
+
         console.log("Image selected:", file.name);
 
         // Create a message bubble for the image
+        const imageUrl = URL.createObjectURL(file); // Create a URL for the image
         const newMessage = {
             nickname: currentNickname,
-            content: file, // Store the file object
-            timestamp: Date.now()
+            content: imageUrl,
+            timestamp: Date.now(),
+            isImage: true
         };
 
-        // Create a message bubble
         const messageBubble = createMessageBubble(
             newMessage.nickname,
-            "", // No text content for images
-            newMessage.timestamp
+            newMessage.content,
+            newMessage.timestamp,
+            true // Indicate that this is an image message
         );
-
-        // Create an image element
-        const imageElement = document.createElement("img");
-        imageElement.src = URL.createObjectURL(file); // Create a URL for the image
-        imageElement.alt = "Uploaded Image";
-        imageElement.style.maxWidth = "100%"; // Ensure the image fits in the chat
-        imageElement.style.borderRadius = "0.5rem"; // Add some styling
-
-        // Append the image to the message bubble
-        messageBubble.querySelector(".message-content").appendChild(imageElement);
 
         // Append the message bubble to the chat stream
         messageStream.appendChild(messageBubble);
