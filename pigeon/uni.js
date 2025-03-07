@@ -3,23 +3,23 @@ var id = 0;
 
 function langChange() {
     console.log("langChange");
-    const messageInput = document.getElementById("message"); // Get the message input field
+    const messageInput = document.getElementById("message");
 
     if (lang == 0) {
-        // Switch to Chinese
         langButton.innerHTML = "<p>Eng</p>";
         header.innerHTML = "秘密聊天室";
         nicknameModal.querySelector('input').placeholder = "暱稱";
         nicknameModal.querySelector('button').textContent = "提交";
-        messageInput.placeholder = "發送訊息..."; // Change the placeholder to Chinese
+        messageInput.placeholder = "發送訊息...";
+        nicknameButton.textContent = "暱稱";
         lang = 1;
     } else {
-        // Switch back to English
         langButton.innerHTML = "<p>中</p>";
         header.innerHTML = "Secret chat room";
         nicknameModal.querySelector('input').placeholder = "nickname";
         nicknameModal.querySelector('button').textContent = "Submit";
-        messageInput.placeholder = "Send a message..."; // Change the placeholder back to English
+        messageInput.placeholder = "Send a message...";
+        nicknameButton.textContent = "Nickname";
         lang = 0;
     }
 }
@@ -28,7 +28,8 @@ let currentNickname = '';
 
 function toggleNicknameModal() {
     const modal = document.getElementById('nickname-modal');
-    modal.style.display = modal.style.display === 'none' ? 'flex' : 'none';
+    modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+    console.log(modal.style.display === 'flex' ? 'none' : 'flex');
 }
 
 function getNickname() {
@@ -37,7 +38,7 @@ function getNickname() {
         console.log("nickname: " + nicknameValue);
         currentNickname = nicknameValue;
         document.getElementById("nickname-input").value = "";
-        toggleNicknameModal(); // Hide modal after setting nickname
+        toggleNicknameModal();
     } else {
         alert("Nickname cannot be empty!");
     }
@@ -73,7 +74,6 @@ ico = document.getElementById("ico");
 message = document.getElementById("message");
 const messageStream = document.getElementById("stream");
 
-// Close modal when clicking outside
 window.onclick = function(event) {
     if (event.target === nicknameModal) {
         toggleNicknameModal();
