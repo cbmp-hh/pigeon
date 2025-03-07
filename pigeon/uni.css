@@ -84,7 +84,7 @@
 }
 
 #title-header {
-    font-family: 'Patrick Hand', serif;
+    font-family: 'Oswald', sans-serif; /* Updated to Oswald */
     font-size: 5vh;
     flex-grow: 1;
     text-align: center;
@@ -200,7 +200,7 @@
 }
 
 .title {
-    font-family: 'Patrick Hand', serif;
+    font-family: 'Oswald', sans-serif; /* Updated to Oswald */
     font-size: 5vh;
 }
 
@@ -234,7 +234,9 @@ p {
 }
 
 .message-content img {
-    max-width: 100%;
+    max-width: 100%; /* Ensure the image doesn't exceed the width of the chat bubble */
+    width: 200px; /* Set a consistent width for all images */
+    height: auto; /* Maintain aspect ratio */
     border-radius: 0.5rem;
     margin-top: 0.5rem;
 }
