@@ -60,7 +60,7 @@
     height: 5vh;
     width: 5vh;
     background-color: rgb(73, 73, 73);
-    border-radius: .5vh;
+    border-radius: 50%; /* Make the language button a circle */
     margin-right: 1vw;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -167,9 +167,9 @@
     align-items: center;
     justify-content: center;
     height: 5vh;
-    width: 5vh;
+    width: 5vh; /* Ensure width and height are equal */
     background-color: rgb(73, 73, 73);
-    border-radius: .5vh;
+    border-radius: 50%; /* Make the button a circle */
     margin-right: 1vw;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -229,4 +229,10 @@ p {
 .message-content {
     margin-top: 0.25rem;
     margin-bottom: 0;
+}
+
+.message-content img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
 }
