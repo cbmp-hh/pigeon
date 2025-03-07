@@ -60,7 +60,7 @@
     height: 5vh;
     width: 5vh;
     background-color: rgb(73, 73, 73);
-    border-radius: 50%; /* Make the language button a circle */
+    border-radius: .5vh; /* Revert to square */
     margin-right: 1vw;
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -170,7 +170,7 @@
     width: 5vh; /* Ensure width and height are equal */
     background-color: rgb(73, 73, 73);
     border-radius: 50%; /* Make the button a circle */
-    margin-right: 1vw;
+    margin-right: 0.5vw; /* Reduced margin to bring it closer to the input */
     cursor: pointer;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     color: white;
@@ -190,6 +190,8 @@
     border: transparent;
     margin-left: 1vw;
     flex-grow: 1;
+    border-radius: 50%; /* Make the textbox round on the edges */
+    padding: 0 1rem; /* Add padding for text inside the input */
 }
 
 #message:focus {
